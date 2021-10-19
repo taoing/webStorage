@@ -17,7 +17,7 @@
       "intro": "class.mod book-intro@text"
     },
     "ruleContent": {
-      "content": "class.page-content@tag.p.1@textNodes",
+      "content": "class.page-content@tag.p.2@tag.div.0@textNodes",
       "nextContentUrl": "class.chapterPages@a@href"
     },
     "ruleExplore": {
