@@ -18,7 +18,7 @@
     },
     "ruleContent": {
       "content": "class.page-content@id.nr1@textNodes",
-      "nextContentUrl": "class.chapterPages@class.curr~a@href"
+      "nextContentUrl": "@css:.chapterPages>.curr~a@href"
     },
     "ruleExplore": {
       "author": "class.author@text",
@@ -64,7 +64,7 @@
     },
     "ruleContent": {
       "content": "class.page-content@id.nr1@textNodes",
-      "nextContentUrl": "class.chapterPages@class.curr~a@href"
+      "nextContentUrl": "@css:.chapterPages>.curr~a@href"
     },
     "ruleExplore": {
       "author": "class.author@text",
@@ -110,7 +110,7 @@
     },
     "ruleContent": {
       "content": "class.page-content@id.nr1@textNodes",
-      "nextContentUrl": "class.chapterPages@class.curr~a@href"
+      "nextContentUrl": "@css:.chapterPages>.curr~a@href"
     },
     "ruleExplore": {
       "author": "class.author@text",
@@ -192,7 +192,7 @@
       "chapterList": "class.chapters@tag.li",
       "chapterName": "tag.a@text",
       "chapterUrl": "tag.a@href",
-      "nextTocUrl": "//a[text()=\"下一页\"]/@href"
+      "nextTocUrl": "text.下一页@herf"
     },
     "searchUrl": "https://m.po18s.com/s.php,{\n \"charset\": \"gbk\",\"method\": \"POST\",\"body\": \"submit=&type=articlename&s={{key}} \"\n}",
     "weight": 0
