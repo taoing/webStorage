@@ -1,11 +1,17 @@
 [
   {
-    "sourceName": "第一版主store",
-    "sourceType": 0,
-    "sourceUrl": "https://m.diyibanzhu.store",
+    "bookSourceGroup": "特殊源",
+    "bookSourceName": "第一版主store",
+    "bookSourceComment": "",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://m.diyibanzhu.store",
     "bookUrlPattern": "",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledExplore": true,
     "exploreUrl": "最后更新::/wap.php?action=shuku&uid=0&totalresult=10000&pageno={{page}}\n总人气::/wap.php?action=shuku&order=1&uid=0&totalresult=10000&pageno={{page}}\n月人气::/wap.php?action=shuku&order=2&uid=0&totalresult=10000&pageno={{page}}\n新书::/wap.php?action=shuku&order=3&uid=0&totalresult=10000&pageno={{page}}\n字数::/wap.php?action=shuku&order=4&uid=0&totalresult=10000&pageno={{page}}",
     "header": "{\n  \"User-Agent\": \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/82.0.3904.96 Safari/537.36\"\n}",
+    "lastUpdateTime": 1618577857916,
     "ruleBookInfo": {
       "coverUrl": "class.bd column-2@tag.img.0@src",
       "intro": "class.mod book-intro@text"
@@ -41,12 +47,17 @@
     "weight": 0
   },
   {
-    "sourceName": "第一版主bar",
-    "sourceType": 0,
-    "sourceUrl": "https://m.diyibanzhu.bar",
+    "bookSourceName": "第一版主bar",
+    "bookSourceType": 0,
+    "bookSourceComment": "",
+    "bookSourceUrl": "https://m.diyibanzhu.bar",
     "bookUrlPattern": "",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledExplore": true,
     "exploreUrl": "最后更新::/wap.php?action=shuku&uid=0&totalresult=10000&pageno={{page}}\n总人气::/wap.php?action=shuku&order=1&uid=0&totalresult=10000&pageno={{page}}\n月人气::/wap.php?action=shuku&order=2&uid=0&totalresult=10000&pageno={{page}}\n新书::/wap.php?action=shuku&order=3&uid=0&totalresult=10000&pageno={{page}}\n字数::/wap.php?action=shuku&order=4&uid=0&totalresult=10000&pageno={{page}}",
     "header": "{\n  \"User-Agent\": \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/82.0.3904.96 Safari/537.36\"\n}",
+    "lastUpdateTime": 1618577857916,
     "ruleBookInfo": {
       "coverUrl": "class.bd column-2@tag.img.0@src",
       "intro": "class.mod book-intro@text"
@@ -82,12 +93,17 @@
     "weight": 0
   },
   {
-    "sourceName": "第一版主online",
-    "sourceType": 0,
-    "sourceUrl": "https://m.diyibanzhu.online",
+    "bookSourceName": "第一版主online",
+    "bookSourceType": 0,
+    "bookSourceComment": "",
+    "bookSourceUrl": "https://m.diyibanzhu.online",
     "bookUrlPattern": "",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledExplore": true,
     "exploreUrl": "最后更新::/wap.php?action=shuku&uid=0&totalresult=10000&pageno={{page}}\n总人气::/wap.php?action=shuku&order=1&uid=0&totalresult=10000&pageno={{page}}\n月人气::/wap.php?action=shuku&order=2&uid=0&totalresult=10000&pageno={{page}}\n新书::/wap.php?action=shuku&order=3&uid=0&totalresult=10000&pageno={{page}}\n字数::/wap.php?action=shuku&order=4&uid=0&totalresult=10000&pageno={{page}}",
     "header": "{\n  \"User-Agent\": \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/82.0.3904.96 Safari/537.36\"\n}",
+    "lastUpdateTime": 1618577857916,
     "ruleBookInfo": {
       "coverUrl": "class.bd column-2@tag.img.0@src",
       "intro": "class.mod book-intro@text"
