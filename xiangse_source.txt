@@ -45,6 +45,8 @@ moreKeys: {"maxPage":300}
 正文: //div[@id="nr1"]/text()
 下一页: //center[@class="chapterPages"]/span/following-sibling::*[1]/@href
 
+[ 正文(推荐使用): //div[@id="nr1"]/p[1]/text()|//div[@id="nr1"]/text() ]
+
 moreKeys: {"maxPage":30}
 
 
