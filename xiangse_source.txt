@@ -1,0 +1,60 @@
+#香色闺阁书源
+
+第一版主bar
+https://m.diyibanzhu.bar
+权重: 10000
+
+搜索:
+请求: https://m.diyibanzhu.bar/wap.php?action=search
+列表: //div[contains(@class,'book-all-list')]/div[1]/ul/li/div[@class="right"]
+书名: //a[@class="name"]/text()
+作者: //p[@class="info"]/text()|%@js return result.replace("作者：", "")
+图标: 
+简介:
+类别: 
+状态: //span[contains(@style,"float:right")]/text()
+字数: //p[@class="info"]/span/text()|%@js return result.replace("字数：", "")
+最后一章: //p[@class="update"]/a/text()
+详情页地址: //a[@class="name"]/@href
+
+moreKeys: {"POST":true, "httpParams":{"objectType":2,"wd":"%@keyWord"}}
+
+书籍详情:
+书名: //div[@class="mod detail"]/div[@class="bd column-2"]/div[2]/h1/text()
+作者: //div[@class="mod detail"]/div[@class="bd column-2"]/div[2]/p[@class="info"]/text()[1]|%@js return result.replace("作者：", "")
+图标: //div[@class="mod detail"]/div[@class="bd column-2"]/div[1]/img/@src
+简介: //div[@class="mod book-intro"]/div[1]/text()
+类别: //div[@class="mod detail"]/div[@class="bd column-2"]/div[2]/p[@class="info"]/text()[2]|%@js return result.replace("类型：", "")
+状态: //div[@class="mod detail"]/div[@class="bd column-2"]/div[2]/span/text()
+字数: //div[@class="mod detail"]/div[@class="bd column-2"]/div[2]/p[@class="info"]/text()[3]|%@js return result.replace("字数：", "")
+最后一章: //div[contains(@class, "chapter-list")][1]/div[2]/ul/li[1]/a/text()
+
+
+请求:
+章节列表:
+列表: //div[contains(@class,'chapter-list')][2]/div[2]/ul/li
+标题: //a/text()
+url: //a/@href
+下一页: //a[@class="nextPage"]/@href
+
+内容:
+正文: //div[@id="nr1"]/text()
+下一页: //center[@class="chapterPages"]/span/following-sibling::*[1]/@href
+
+分类:
+全本
+
+请求信息: https://m.diyibanzhu.bar/book/%@filter_%@pageIndex.html
+
+列表: //div[@class="bd"]/ul/li/div[@class="right"]
+书名: //a[@class="name"]/text()
+作者: //a[@class="author"]/text()
+图标: 
+简介:
+类别: 
+状态: //span[contains(@style,"float:right")]/text()
+字数: //span[@class="words"]/text()|%@js return result.replace("字数：", "")
+最后一章: //p[@class="update"]/a/text()
+详情页地址: //a[@class="name"]/@href
+
+moreKeys: {"pageSize":"30","requestFilters":{"最后更新":"9536","总人气":"1_9536","月人气":"2_9536","新书":"3_9536","字数":"4_9536"}}
