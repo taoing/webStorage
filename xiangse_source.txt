@@ -4,6 +4,7 @@
 https://m.diyibanzhu.bar
 权重: 10000
 
+
 搜索:
 请求: https://m.diyibanzhu.bar/wap.php?action=search
 列表: //div[contains(@class,'book-all-list')]/div[1]/ul/li/div[@class="right"]
@@ -19,6 +20,7 @@ https://m.diyibanzhu.bar
 
 moreKeys: {"POST":true, "httpParams":{"objectType":2,"wd":"%@keyWord"}}
 
+
 书籍详情:
 书名: //div[@class="mod detail"]/div[@class="bd column-2"]/div[2]/h1/text()
 作者: //div[@class="mod detail"]/div[@class="bd column-2"]/div[2]/p[@class="info"]/text()[1]|%@js return result.replace("作者：", "").trim()
@@ -30,16 +32,17 @@ moreKeys: {"POST":true, "httpParams":{"objectType":2,"wd":"%@keyWord"}}
 最后一章: //div[contains(@class, "chapter-list")][1]/div[2]/ul/li[1]/a/text()
 
 
-请求:
 章节列表:
 列表: //div[contains(@class,'chapter-list')][2]/div[2]/ul/li
 标题: //a/text()
 url: //a/@href
 下一页: //a[@class="nextPage"]/@href
 
+
 内容:
 正文: //div[@id="nr1"]/text()
 下一页: //center[@class="chapterPages"]/span/following-sibling::*[1]/@href
+
 
 分类:
 全本
