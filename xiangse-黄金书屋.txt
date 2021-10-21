@@ -1,0 +1,81 @@
+#香色闺阁书源
+
+黄金书屋
+https://www.dduxs.com
+权重: 9000
+
+
+搜索:
+
+请求: /search.php
+格式: json
+
+js手动解析:
+function functionName(config, params, result) {
+    let list = [];
+    if (result.code == 200) {
+        let search = result.data.search;
+        search.forEach((item, index, array) => {
+            let bookInfo = {};
+            let id = item.site_book_id;
+            if (index === 0 && item.title.indexOf("<b style=") > -1) {
+                bookInfo.bookName = item.title.replace("<b style=\"color:red\">", "").replace("</b>", "");
+            } else {
+                bookInfo.bookName = item.title;
+            }
+            bookInfo.author = item.author;
+            bookInfo.cover = "/img/" + Math.floor(id / 1000) + "/" + id + ".jpg";
+            bookInfo.desc = "";
+            bookInfo.cat = "";
+            bookInfo.status = item.status;
+            bookInfo.wordCount = "";
+            bookInfo.lastChapterTitle = item.lastchapter;
+            bookInfo.detailUrl = "/read/" + id + "/";
+            list.push(bookInfo);
+        })
+    }
+    
+    return {"list": list, "more": false};
+}
+
+moreKeys: {"POST":true,"httpParams":{"q":"%@keyWord","offset":"%@offset","length":30}}
+
+
+书籍详情:
+书名: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-describe"]/h1[1]/text()
+作者: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-describe"]/p[1]/a/text()
+图标: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-img"]/img/@data-original
+简介: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-describe"]/p[last()]/text()
+类别: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-describe"]/p[2]/text()
+状态: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-describe"]/p[3]/font/text()
+字数: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-describe"]/p[4]/text()|%@js return parseFloat(result.replace("万字", "")) * 10000
+最后一章: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-describe"]/p[6]/a/text()
+
+
+章节列表:
+列表: /html/body/div[@id="content-list"]/div[@class="book-list clearfix"]/ul/li
+标题: //a/text()
+url: //a/@href
+
+
+内容:
+正文: //div[@id="nr1"]
+
+
+分类:
+全部
+
+请求信息: /%@filter
+
+列表: /html/body/div[@id="content-list"]/div[@class="pop-books2 clearfix"]/ol/li
+书名: //a[2]/h2/text()
+作者: 
+图标: //a[1]/img/@data-original
+简介:
+类别: 
+状态: 
+字数: 
+最后一章: 
+详情页地址: //a[2]/@href
+
+moreKeys: {"requestFilters":{"起点热度书":"category/1/","纵横热度书":"category/2/","影视剧小说":"category/3/","中文经典":"category/4/","金庸作品集":"category/5/"}}
