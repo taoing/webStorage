@@ -1,0 +1,49 @@
+#香色闺阁书源
+
+147
+https://m.147xs.org/
+
+书籍详情:
+书名: //div[@class="book_info"]//dl/dt/text()
+作者: //div[@class="book_info"]//dl/dd[1]/span/text()
+图标: //div[@class="book_info"]//div[@class="fm"]/img/@src
+简介: //div[@class="book_info"]//p[@class="intro"]/text()
+类别: //div[@class="book_info"]//dl/dd[2]/span/text()
+状态: //div[@class="book_info"]//dl/dd[3]/span/text()
+字数: 
+最后一章: //div[@class="book_last"]/dl/dd[1]/a/text()
+
+
+分类:
+
+请求信息: /%@filter
+
+列表: /html/body/div[1]/div[@class="recommend"]/div[@id="main"]/div
+书名: /a/p[1]/text()
+作者: /a/p[2]/text()|%@js return result.replace("作者：", "")
+图标: /a/img/@data-original
+简介: /p/text()
+类别: 
+状态: 
+字数: 
+最后一章: 
+详情页地址: /a/@href
+
+moreKeys:
+{
+  "requestFilters": {
+    "玄幻小说": "sort/1/",
+    "修真小说": "sort/2/",
+    "都市小说": "sort/3/",
+    "穿越小说": "sort/4/",
+    "网游小说": "sort/5/",
+    "科幻小说": "sort/6/",
+    "次元小说": "sort/7/",
+    "综合言情": "sort/8/",
+    "浪漫青春": "sort/9/",
+    "现代言情": "sort/10/",
+    "古代言情": "sort/11/",
+    "幻想言情": "sort/12/",
+    "完本小说": "wanben/"
+  }
+}
