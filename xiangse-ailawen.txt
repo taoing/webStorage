@@ -1,0 +1,106 @@
+#香色闺阁书源
+
+爱辣文小说网(vpn)
+https://m.ailawen.com
+权重: 9000
+
+
+搜索:
+请求: /modules/article/waps.php
+
+列表: //div[@class="cover"]/p
+书名: //a[2]/text()
+作者: //a[3]/text()
+图标: 
+简介:
+类别: //a[1]/text()|%@js return result.replace("[", "").replace("]", "")
+状态: 
+字数: 
+最后一章: 
+详情页地址: //a[2]/@href
+
+moreKeys: {"POST":true, "httpParams":{"searchtype":"articlename","submit":"","searchkey":"%@keyWord"}}
+请求提交编码: gbk
+响应编码: gbk
+
+
+书籍详情:
+书名: //div[@class="block_txt2"]/p[1]/a/h2/text()
+作者: //div[@class="block_txt2"]/p[2]/a/text()
+图标: //div[@class="block_img2"]/img/@src
+简介: //div[@class="intro_info"]/text()
+类别: //div[@class="block_txt2"]/p[3]/a/text()
+状态: //div[@class="block_txt2"]/p[4]/text()|%@js return result.replace("状态：", "")
+字数: 
+最后一章: //div[@class="block_txt2"]/p[6]/a/text()
+
+
+章节列表:
+请求: %@js return result.replace("/info-", "/wapbook-")
+列表: //ul[@class="chapter"]/li
+标题: //a/text()
+url: //a/@href
+下一页: //div[@class="page"][1]/a[text()="下一页"]/@href
+
+moreKeys: {"maxPage":300}
+
+
+内容:
+正文: 
+下一页: 
+
+moreKeys: {"maxPage":30}
+
+
+分类:
+
+1. 分类:
+
+请求信息: /%@filter-%@pageIndex/
+
+列表: //div[@class="cover"]/p
+书名: //a[2]/text()
+作者: //a[3]/text()
+图标: 
+简介:
+类别: //a[1]/text()|%@js return result.replace("[", "").replace("]", "")
+状态: 
+字数: 
+最后一章: 
+详情页地址: //a[2]/@href
+
+moreKeys:
+{
+  "maxPage": 200,
+  "requestFilters": {
+    "玄幻小说": "sort-1",
+    "修真小说": "sort-2",
+    "都市小说": "sort-3",
+    "穿越小说": "sort-4",
+    "网游小说": "sort-5",
+    "科幻小说": "sort-6",
+    "恐怖小说": "sort-7",
+    "肉文辣文": "sort-8",
+    "其他小说": "sort-9"
+  }
+}
+
+2. 排行
+moreKeys:
+{
+  "maxPage": 200,
+  "requestFilters": {
+    "日点击榜": "top-dayvisit",
+    "周点击榜": "top-weekvisit",
+    "月点击榜": "top-monthvisit",
+    "总点击榜": "top-allvisit",
+    "总收藏榜": "top-goodnum",
+    "字数排行": "top-size",
+    "日推荐榜": "top-dayvote",
+    "周推荐榜": "top-weekvote",
+    "月推荐榜": "top-monthvote",
+    "总推荐榜": "top-allvote",
+    "最新入库": "top-postdate",
+    "最近更新": "top-lastupdate"
+  }
+}
