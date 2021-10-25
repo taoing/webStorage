@@ -19,15 +19,15 @@ https://m.147xs.org/
 请求信息: /%@filter
 
 列表: /html/body/div[1]/div[@class="recommend"]/div[@id="main"]/div
-书名: /a/p[1]/text()
-作者: /a/p[2]/text()|%@js return result.replace("作者：", "")
-图标: /a/img/@data-original
-简介: /p/text()
+书名: //a/p[1]/text()
+作者: //a/p[2]/text()|%@js return result.replace("作者：", "")
+图标: //a/img/@data-original
+简介: //p[@class="review"]/text()
 类别: 
 状态: 
 字数: 
 最后一章: 
-详情页地址: /a/@href
+详情页地址: //a/@href
 
 moreKeys:
 {
