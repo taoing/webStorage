@@ -1,0 +1,184 @@
+#香色闺阁书源
+
+🔞 你懂的
+http://www.120xsw.com
+权重: 8520
+
+
+搜索:
+
+请求: /modules/article/search.php
+列表: //div[@id="content"]/div[@class="inner"]/div[@class="details"]/div[@class="item-pic"]
+书名: //h3/a/text()
+作者: //p[1]/i[1]/text()
+图标: //a[1]/img/@src|%@js
+if (result.endsWith("nocover.jpg")) {
+  return ""
+} else {
+  return result;
+}
+
+简介: //p[3]/text()
+类别: 
+状态: //p[1]/i[2]/text()
+字数: 
+最后一章: //p[2]/a/text()
+详情页地址: //h3/a/@href
+
+moreKeys:
+{
+  "POST": false,
+  "httpParams": {
+    "searchKey": "%@keyWord"
+  }
+}
+
+请求编码: gbk
+响应编码: gbk
+
+
+书籍详情:
+书名: //div[@class="book-info"]/div[@class="book-title"]/h1/text()
+作者: //div[@class="book-info"]/div[@class="book-title"]/em/text()|%@js return result.replace("作者：", "")
+图标: //div[@class="book-img"]/img/@src|%@js
+if (result.endsWith("nocover.jpg")) {
+  return ""
+} else {
+  return result;
+}
+
+简介: //div[@class="book-info"]/p[@class="book-intro"]/text()
+类别: 
+状态: //div[@class="book-info"]/p[@class="book-stats"]/text()[2]
+字数: //div[@class="book-info"]/p[@class="book-stats"]/text()[3]
+最后一章: //div[@class="con"]/p[1]/a/text()
+
+
+章节列表:
+请求: 
+%@js
+let result = "http://www.120xsw.com/book/170092/";
+let book = "/book/";
+let x = result.indexOf(book);
+let idStr = result.substring(x + book.length, result.length - 1);
+let index =  Math.floor(parseInt(idStr) / 1000);
+let chapterUrl = result.substring(0, x) + "/txt/" + index + "/" + idStr + "/";
+return chapterUrl;
+
+列表: //dl[@class="chapterlist"]/dd
+标题: //a/text()
+url: //a/@href
+下一页: 
+moreKeys:
+
+
+内容:
+正文: //div[@id="BookText"]/text()
+下一页: 
+
+moreKeys:
+
+
+分类:
+
+1. 分类:
+请求信息: /list/%@filter/1.html
+
+列表: //ul[@class="item-con"]/li
+书名: //span[2]/a/text()
+作者: //span[3]/text()
+图标: 
+简介: 
+类别: //span[1]/text()|%@js return result.replace("[", "").replace("]", "")
+状态: //span[5]/text()
+字数: 
+最后一章: //span[2]/i/a/text()
+详情页地址: //span[2]/a/@href
+
+moreKeys:
+{
+  "requestFilters": {
+    "玄幻武侠": "1",
+    "耽美言情": "2",
+    "恐怖灵异": "3",
+    "历史军事": "4",
+    "侦探推理": "5",
+    "网游科幻": "6",
+    "辣文激情": "7",
+    "种田小说": "8",
+    "短篇合集": "9",
+    "其他类型": "10"
+  }
+}
+
+
+2. 排行:
+请求信息: /top/%@filter/
+
+列表: 
+书名: 
+作者: 
+图标: 
+简介: 
+类别: 
+状态: 
+字数: 
+最后一章: 
+详情页地址: 
+
+moreKeys:
+{
+  "requestFilters": {
+    "最新入库": "postdate",
+    "日点击榜": "dayvisit",
+    "周点击榜": "weekvisit",
+    "月点击榜": "monthvisit",
+    "总点击榜": "allvisit",
+    "日推荐榜": "dayvote",
+    "周推荐榜": "weekvote",
+    "月推荐榜": "monthvote",
+    "总推荐榜": "allvote",
+    "字数排行": "size",
+    "总收藏榜": "goodnum"
+  }
+}
+
+
+3. 字母检索:
+请求信息: /list/%@filter/1.html
+
+moreKeys:
+{
+  "requestFilters": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D",
+    "E": "E",
+    "F": "F",
+    "G": "G",
+    "H": "H",
+    "I": "I",
+    "J": "J",
+    "K": "K",
+    "L": "L",
+    "M": "M",
+    "N": "N",
+    "O": "O",
+    "P": "P",
+    "Q": "Q",
+    "R": "R",
+    "S": "S",
+    "T": "T",
+    "U": "U",
+    "V": "V",
+    "W": "W",
+    "X": "X",
+    "Y": "Y",
+    "Z": "Z"
+  }
+}
+
+
+4. 全本:
+请求: /modules/article/index.php?fullflag=1
