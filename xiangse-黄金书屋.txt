@@ -65,7 +65,7 @@ url: //a/@href
 分类:
 全部
 
-请求信息: /%@filter
+请求信息: /category/%@filter/
 
 列表: /html/body/div[@id="content-list"]/div[@class="pop-books2 clearfix"]/ol/li
 书名: //a[2]/h2/text()
@@ -78,4 +78,14 @@ url: //a/@href
 最后一章: 
 详情页地址: //a[2]/@href
 
-moreKeys: {"requestFilters":{"起点热度书":"category/1/","纵横热度书":"category/2/","影视剧小说":"category/3/","中文经典":"category/4/","金庸作品集":"category/5/"}}
+moreKeys:
+{
+  "requestFilters": {
+    "起点热度书": "1",
+    "纵横热度书": "2",
+    "影视剧小说": "3",
+    "中文经典": "4",
+    "金庸作品集": "5"
+  }
+}
+
