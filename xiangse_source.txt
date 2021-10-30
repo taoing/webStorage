@@ -66,4 +66,34 @@ moreKeys: {"maxPage":30}
 最后一章: //p[@class="update"]/a/text()
 详情页地址: //a[@class="name"]/@href
 
-moreKeys: {"pageSize":"30","requestFilters":{"最后更新":"9536","总人气":"1_9536","月人气":"2_9536","新书":"3_9536","字数":"4_9536"}}
+moreKeys:
+{
+  "maxPage": 30,
+  "requestFilters": [
+    {
+      "key": "filter",
+      "items": [
+        {
+          "title": "最后更新",
+          "value": "9536"
+        },
+        {
+          "title": "总人气",
+          "value": "1_9536"
+        },
+        {
+          "title": "月人气",
+          "value": "2_9536"
+        },
+        {
+          "title": "新书",
+          "value": "3_9536"
+        },
+        {
+          "title": "字数",
+          "value": "4_9536"
+        }
+      ]
+    }
+  ]
+}
