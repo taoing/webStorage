@@ -31,19 +31,63 @@ https://m.147xs.org/
 
 moreKeys:
 {
-  "requestFilters": {
-    "玄幻小说": "sort/1/",
-    "修真小说": "sort/2/",
-    "都市小说": "sort/3/",
-    "穿越小说": "sort/4/",
-    "网游小说": "sort/5/",
-    "科幻小说": "sort/6/",
-    "次元小说": "sort/7/",
-    "综合言情": "sort/8/",
-    "浪漫青春": "sort/9/",
-    "现代言情": "sort/10/",
-    "古代言情": "sort/11/",
-    "幻想言情": "sort/12/",
-    "完本小说": "wanben/"
-  }
+  "requestFilters": [
+    {
+      "key": "filter",
+      "items": [
+        {
+          "title": "玄幻小说",
+          "value": "sort/1/"
+        },
+        {
+          "title": "修真小说",
+          "value": "sort/2/"
+        },
+        {
+          "title": "都市小说",
+          "value": "sort/3/"
+        },
+        {
+          "title": "穿越小说",
+          "value": "sort/4/"
+        },
+        {
+          "title": "网游小说",
+          "value": "sort/5/"
+        },
+        {
+          "title": "科幻小说",
+          "value": "sort/6/"
+        },
+        {
+          "title": "次元小说",
+          "value": "sort/7/"
+        },
+        {
+          "title": "综合言情",
+          "value": "sort/8/"
+        },
+        {
+          "title": "浪漫青春",
+          "value": "sort/9/"
+        },
+        {
+          "title": "现代言情",
+          "value": "sort/10/"
+        },
+        {
+          "title": "古代言情",
+          "value": "sort/11/"
+        },
+        {
+          "title": "幻想言情",
+          "value": "sort/12/"
+        },
+        {
+          "title": "完本小说",
+          "value": "wanben/"
+        }
+      ]
+    }
+  ]
 }
