@@ -72,35 +72,109 @@ moreKeys: {"maxPage":30}
 moreKeys:
 {
   "maxPage": 200,
-  "requestFilters": {
-    "玄幻小说": "sort-1",
-    "修真小说": "sort-2",
-    "都市小说": "sort-3",
-    "穿越小说": "sort-4",
-    "网游小说": "sort-5",
-    "科幻小说": "sort-6",
-    "恐怖小说": "sort-7",
-    "肉文辣文": "sort-8",
-    "其他小说": "sort-9"
-  }
+  "requestFilters": [
+    {
+      "key": "filter",
+      "items": [
+        {
+          "title": "玄幻小说",
+          "value": "sort-1"
+        },
+        {
+          "title": "修真小说",
+          "value": "sort-2"
+        },
+        {
+          "title": "都市小说",
+          "value": "sort-3"
+        },
+        {
+          "title": "穿越小说",
+          "value": "sort-4"
+        },
+        {
+          "title": "网游小说",
+          "value": "sort-5"
+        },
+        {
+          "title": "科幻小说",
+          "value": "sort-6"
+        },
+        {
+          "title": "恐怖小说",
+          "value": "sort-7"
+        },
+        {
+          "title": "肉文辣文",
+          "value": "sort-8"
+        },
+        {
+          "title": "其他小说",
+          "value": "sort-9"
+        }
+      ]
+    }
+  ]
 }
+
 
 2. 排行
 moreKeys:
 {
   "maxPage": 200,
-  "requestFilters": {
-    "日点击榜": "top-dayvisit",
-    "周点击榜": "top-weekvisit",
-    "月点击榜": "top-monthvisit",
-    "总点击榜": "top-allvisit",
-    "总收藏榜": "top-goodnum",
-    "字数排行": "top-size",
-    "日推荐榜": "top-dayvote",
-    "周推荐榜": "top-weekvote",
-    "月推荐榜": "top-monthvote",
-    "总推荐榜": "top-allvote",
-    "最新入库": "top-postdate",
-    "最近更新": "top-lastupdate"
-  }
+  "requestFilters": [
+    {
+      "key": "filter",
+      "items": [
+        {
+          "title": "日点击榜",
+          "value": "top-dayvisit"
+        },
+        {
+          "title": "周点击榜",
+          "value": "top-weekvisit"
+        },
+        {
+          "title": "月点击榜",
+          "value": "top-monthvisit"
+        },
+        {
+          "title": "总点击榜",
+          "value": "top-allvisit"
+        },
+        {
+          "title": "总收藏榜",
+          "value": "top-goodnum"
+        },
+        {
+          "title": "字数排行",
+          "value": "top-size"
+        },
+        {
+          "title": "日推荐榜",
+          "value": "top-dayvote"
+        },
+        {
+          "title": "周推荐榜",
+          "value": "top-weekvote"
+        },
+        {
+          "title": "月推荐榜",
+          "value": "top-monthvote"
+        },
+        {
+          "title": "总推荐榜",
+          "value": "top-allvote"
+        },
+        {
+          "title": "最新入库",
+          "value": "top-postdate"
+        },
+        {
+          "title": "最近更新",
+          "value": "top-lastupdate"
+        }
+      ]
+    }
+  ]
 }
