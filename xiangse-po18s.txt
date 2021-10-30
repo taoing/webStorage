@@ -61,10 +61,13 @@ moreKeys:
 %@js
 let book = "/book/";
 let x = result.indexOf(book);
-let idStr = result.substring(x + book.length, result.length - 1);
-let index =  Math.floor(parseInt(idStr) / 1000);
-let chapterUrl = result.substring(0, x) + "/" + index + "/" + idStr + "/";
-return chapterUrl;
+if (x > -1) {
+    let idStr = result.substring(x + book.length, result.length - 1);
+    let index =  Math.floor(parseInt(idStr) / 1000);
+    let chapterUrl = result.substring(0, x) + "/" + index + "/" + idStr + "/";
+    return chapterUrl;
+}
+return result;
 
 列表: //ul[@class="chapters"]/li
 标题: //a/text()
