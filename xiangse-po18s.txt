@@ -9,7 +9,13 @@ https://m.po18s.com
 
 请求: /s.php
 列表: //div[@class="searchresult"]/p
-书名: //a[1]/text()
+书名: //a[1]/text()|%@js
+if (result.indexOf("\n") > -1) {
+    return result.split("\n")[0];
+} else {
+    return result;
+}
+
 作者: //span/a/text()
 图标: 
 简介:
@@ -17,7 +23,13 @@ https://m.po18s.com
 状态: 
 字数: 
 最后一章: 
-详情页地址: //a[1]/@href
+详情页地址: //a[1]/@href|%@js
+if (result.indexOf("\n") > -1) {
+    return result.split("\n")[0];
+} else {
+    return result;
+}
+
 
 moreKeys:
 {
@@ -29,7 +41,7 @@ moreKeys:
 }
 
 请求编码: gbk
-响应编码: gbk
+响应编码: gb2312
 
 
 书籍详情:
@@ -46,7 +58,6 @@ moreKeys:
 章节列表:
 请求: 
 %@js
-let result = "https://m.po18s.com/book/15482/";
 let book = "/book/";
 let x = result.indexOf(book);
 let idStr = result.substring(x + book.length, result.length - 1);
