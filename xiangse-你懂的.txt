@@ -97,18 +97,53 @@ moreKeys:
 
 moreKeys:
 {
-  "requestFilters": {
-    "玄幻武侠": "1",
-    "耽美言情": "2",
-    "恐怖灵异": "3",
-    "历史军事": "4",
-    "侦探推理": "5",
-    "网游科幻": "6",
-    "辣文激情": "7",
-    "种田小说": "8",
-    "短篇合集": "9",
-    "其他类型": "10"
-  }
+  "requestFilters": [
+    {
+      "key": "filter",
+      "items": [
+        {
+          "title": "玄幻武侠",
+          "value": "1"
+        },
+        {
+          "title": "耽美言情",
+          "value": "2"
+        },
+        {
+          "title": "恐怖灵异",
+          "value": "3"
+        },
+        {
+          "title": "历史军事",
+          "value": "4"
+        },
+        {
+          "title": "侦探推理",
+          "value": "5"
+        },
+        {
+          "title": "网游科幻",
+          "value": "6"
+        },
+        {
+          "title": "辣文激情",
+          "value": "7"
+        },
+        {
+          "title": "种田小说",
+          "value": "8"
+        },
+        {
+          "title": "短篇合集",
+          "value": "9"
+        },
+        {
+          "title": "其他类型",
+          "value": "10"
+        }
+      ]
+    }
+  ]
 }
 
 
@@ -128,19 +163,57 @@ moreKeys:
 
 moreKeys:
 {
-  "requestFilters": {
-    "最新入库": "postdate",
-    "日点击榜": "dayvisit",
-    "周点击榜": "weekvisit",
-    "月点击榜": "monthvisit",
-    "总点击榜": "allvisit",
-    "日推荐榜": "dayvote",
-    "周推荐榜": "weekvote",
-    "月推荐榜": "monthvote",
-    "总推荐榜": "allvote",
-    "字数排行": "size",
-    "总收藏榜": "goodnum"
-  }
+  "requestFilters": [
+    {
+      "key": "filter",
+      "items": [
+        {
+          "title": "最新入库",
+          "value": "postdate"
+        },
+        {
+          "title": "日点击榜",
+          "value": "dayvisit"
+        },
+        {
+          "title": "周点击榜",
+          "value": "weekvisit"
+        },
+        {
+          "title": "月点击榜",
+          "value": "monthvisit"
+        },
+        {
+          "title": "总点击榜",
+          "value": "allvisit"
+        },
+        {
+          "title": "日推荐榜",
+          "value": "dayvote"
+        },
+        {
+          "title": "周推荐榜",
+          "value": "weekvote"
+        },
+        {
+          "title": "月推荐榜",
+          "value": "monthvote"
+        },
+        {
+          "title": "总推荐榜",
+          "value": "allvote"
+        },
+        {
+          "title": "字数排行",
+          "value": "size"
+        },
+        {
+          "title": "总收藏榜",
+          "value": "goodnum"
+        }
+      ]
+    }
+  ]
 }
 
 
@@ -149,34 +222,117 @@ moreKeys:
 
 moreKeys:
 {
-  "requestFilters": {
-    "A": "A",
-    "B": "B",
-    "C": "C",
-    "D": "D",
-    "E": "E",
-    "F": "F",
-    "G": "G",
-    "H": "H",
-    "I": "I",
-    "J": "J",
-    "K": "K",
-    "L": "L",
-    "M": "M",
-    "N": "N",
-    "O": "O",
-    "P": "P",
-    "Q": "Q",
-    "R": "R",
-    "S": "S",
-    "T": "T",
-    "U": "U",
-    "V": "V",
-    "W": "W",
-    "X": "X",
-    "Y": "Y",
-    "Z": "Z"
-  }
+  "requestFilters": [
+    {
+      "key": "filter",
+      "items": [
+        {
+          "title": "A",
+          "value": "A"
+        },
+        {
+          "title": "B",
+          "value": "B"
+        },
+        {
+          "title": "C",
+          "value": "C"
+        },
+        {
+          "title": "D",
+          "value": "D"
+        },
+        {
+          "title": "E",
+          "value": "E"
+        },
+        {
+          "title": "F",
+          "value": "F"
+        },
+        {
+          "title": "G",
+          "value": "G"
+        },
+        {
+          "title": "H",
+          "value": "H"
+        },
+        {
+          "title": "I",
+          "value": "I"
+        },
+        {
+          "title": "J",
+          "value": "J"
+        },
+        {
+          "title": "K",
+          "value": "K"
+        },
+        {
+          "title": "L",
+          "value": "L"
+        },
+        {
+          "title": "M",
+          "value": "M"
+        },
+        {
+          "title": "N",
+          "value": "N"
+        },
+        {
+          "title": "O",
+          "value": "O"
+        },
+        {
+          "title": "P",
+          "value": "P"
+        },
+        {
+          "title": "Q",
+          "value": "Q"
+        },
+        {
+          "title": "R",
+          "value": "R"
+        },
+        {
+          "title": "S",
+          "value": "S"
+        },
+        {
+          "title": "T",
+          "value": "T"
+        },
+        {
+          "title": "U",
+          "value": "U"
+        },
+        {
+          "title": "V",
+          "value": "V"
+        },
+        {
+          "title": "W",
+          "value": "W"
+        },
+        {
+          "title": "X",
+          "value": "X"
+        },
+        {
+          "title": "Y",
+          "value": "Y"
+        },
+        {
+          "title": "Z",
+          "value": "Z"
+        }
+      ]
+    }
+  ]
 }
 
 
