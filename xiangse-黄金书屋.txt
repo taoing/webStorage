@@ -129,11 +129,31 @@ url: //a/@href
 
 moreKeys: 
 {
-  "requestFilters": {
-    "起点热度书": "1",
-    "纵横热度书": "2",
-    "影视剧小说": "3",
-    "中文经典": "4",
-    "金庸作品集": "5"
-  }
+  "requestFilters": [
+    {
+      "key": "filter",
+      "items": [
+        {
+          "title": "起点热度书",
+          "value": "1"
+        },
+        {
+          "title": "纵横热度书",
+          "value": "2"
+        },
+        {
+          "title": "影视剧小说",
+          "value": "3"
+        },
+        {
+          "title": "中文经典",
+          "value": "4"
+        },
+        {
+          "title": "金庸作品集",
+          "value": "5"
+        }
+      ]
+    }
+  ]
 }
