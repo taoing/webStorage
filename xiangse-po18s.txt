@@ -88,27 +88,87 @@ moreKeys:
 moreKeys:
 {
   "maxPage": 200,
-  "requestFilters": {
-    "都市": "1",
-    "浓情": "2",
-    "言情": "3",
-    "校园": "4",
-    "武侠": "5",
-    "玄幻": "6",
-    "穿越": "7",
-    "惊悚": "8",
-    "悬疑": "9",
-    "重生": "10",
-    "历史": "11",
-    "网游": "12",
-    "科幻": "13",
-    "耽美": "14",
-    "高干": "15",
-    "种田": "16",
-    "百合": "17",
-    "其他": "18"
-  }
+  "requestFilters": [
+    {
+      "key": "filter",
+      "items": [
+        {
+          "title": "都市",
+          "value": "1"
+        },
+        {
+          "title": "浓情",
+          "value": "2"
+        },
+        {
+          "title": "言情",
+          "value": "3"
+        },
+        {
+          "title": "校园",
+          "value": "4"
+        },
+        {
+          "title": "武侠",
+          "value": "5"
+        },
+        {
+          "title": "玄幻",
+          "value": "6"
+        },
+        {
+          "title": "穿越",
+          "value": "7"
+        },
+        {
+          "title": "惊悚",
+          "value": "8"
+        },
+        {
+          "title": "悬疑",
+          "value": "9"
+        },
+        {
+          "title": "重生",
+          "value": "10"
+        },
+        {
+          "title": "历史",
+          "value": "11"
+        },
+        {
+          "title": "网游",
+          "value": "12"
+        },
+        {
+          "title": "科幻",
+          "value": "13"
+        },
+        {
+          "title": "耽美",
+          "value": "14"
+        },
+        {
+          "title": "高干",
+          "value": "15"
+        },
+        {
+          "title": "种田",
+          "value": "16"
+        },
+        {
+          "title": "百合",
+          "value": "17"
+        },
+        {
+          "title": "其他",
+          "value": "18"
+        }
+      ]
+    }
+  ]
 }
+
 
 排行:
 请求信息: /top/%@filter_%@pageIndex/
@@ -127,18 +187,59 @@ moreKeys:
 moreKeys:
 {
   "maxPage": 200,
-  "requestFilters": {
-    "日点击榜": "dayvisit",
-    "周点击榜": "weekvisit",
-    "月点击榜": "monthvisit",
-    "总点击榜": "allvisit",
-    "总收藏榜": "goodnum",
-    "字数排行": "size",
-    "日推荐榜": "dayvote",
-    "周推荐榜": "weekvote",
-    "月推荐榜": "monthvote",
-    "总推荐榜": "allvote",
-    "最新入库": "postdate",
-    "最近更新": "lastupdate"
-  }
+  "requestFilters": [
+    {
+      "key": "filter",
+      "items": [
+        {
+          "title": "日点击榜",
+          "value": "dayvisit"
+        },
+        {
+          "title": "周点击榜",
+          "value": "weekvisit"
+        },
+        {
+          "title": "月点击榜",
+          "value": "monthvisit"
+        },
+        {
+          "title": "总点击榜",
+          "value": "allvisit"
+        },
+        {
+          "title": "总收藏榜",
+          "value": "goodnum"
+        },
+        {
+          "title": "字数排行",
+          "value": "size"
+        },
+        {
+          "title": "日推荐榜",
+          "value": "dayvote"
+        },
+        {
+          "title": "周推荐榜",
+          "value": "weekvote"
+        },
+        {
+          "title": "月推荐榜",
+          "value": "monthvote"
+        },
+        {
+          "title": "总推荐榜",
+          "value": "allvote"
+        },
+        {
+          "title": "最新入库",
+          "value": "postdate"
+        },
+        {
+          "title": "最近更新",
+          "value": "lastupdate"
+        }
+      ]
+    }
+  ]
 }
