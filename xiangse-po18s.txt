@@ -60,12 +60,15 @@ moreKeys:
 请求: 
 %@js
 let book = "/book/";
-let x = result.indexOf(book);
-if (x > -1) {
-    let idStr = result.substring(x + book.length, result.length - 1);
-    let index =  Math.floor(parseInt(idStr) / 1000);
-    let chapterUrl = result.substring(0, x) + "/" + index + "/" + idStr + "/";
+let index = result.indexOf(book);
+if (index > -1) {
+    let idStr = result.substring(index + book.length, result.length - 1);
+    let i =  Math.floor(parseInt(idStr) / 1000);
+    let chapterUrl = result.substring(0, index) + "/" + i + "/" + idStr + "/";
     return chapterUrl;
+}
+if (result.endsWith("_1/")) {
+    return null;
 }
 return result;
 
