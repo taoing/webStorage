@@ -6,7 +6,7 @@ https://m.diyibanzhu.bar
 
 
 搜索:
-请求: https://m.diyibanzhu.bar/wap.php?action=search
+请求: /wap.php?action=search
 列表: //div[contains(@class,'book-all-list')]/div[1]/ul/li/div[@class="right"]
 书名: //a[@class="name"]/text()
 作者: //p[@class="info"]/text()|%@js return result.replace("作者：", "").trim()
@@ -53,7 +53,7 @@ moreKeys: {"maxPage":30}
 分类:
 全本
 
-请求信息: https://m.diyibanzhu.bar/book/%@filter_%@pageIndex.html
+请求信息: /book/%@filter_%@pageIndex.html
 
 列表: //div[@class="bd"]/ul/li/div[@class="right"]
 书名: //a[@class="name"]/text()
