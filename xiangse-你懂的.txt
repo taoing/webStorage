@@ -13,7 +13,7 @@ http://www.120xsw.com
 作者: //p[1]/i[1]/text()
 图标: //a[1]/img/@src|%@js
 if (result.endsWith("nocover.jpg")) {
-  return ""
+  return null;
 } else {
   return result;
 }
@@ -42,7 +42,7 @@ moreKeys:
 作者: //div[@class="book-info"]/div[@class="book-title"]/em/text()|%@js return result.replace("作者：", "")
 图标: //div[@class="book-img"]/img/@src|%@js
 if (result.endsWith("nocover.jpg")) {
-  return ""
+  return null;
 } else {
   return result;
 }
