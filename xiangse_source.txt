@@ -7,6 +7,14 @@ https://m.diyibanzhu.bar
 
 搜索:
 请求: /wap.php?action=search
+
+%@js
+let url = "/wap.php?action=search";
+let hp = {};
+hp.objectType = 2;
+hp.wd = params.keyWord;
+return {url: url, httpParams: hp, POST: true};
+
 列表: //div[contains(@class,'book-all-list')]/div[1]/ul/li/div[@class="right"]
 书名: //a[@class="name"]/text()
 作者: //p[@class="info"]/text()|%@js return result.replace("作者：", "").trim()
