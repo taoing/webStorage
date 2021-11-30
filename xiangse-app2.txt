@@ -1,0 +1,79 @@
+#香色闺阁书源
+
+神书宝
+https://quapp.shenbabao.com
+权重: 8600
+
+搜索:
+
+请求:
+%@js
+let url = "https://sou.jiaston.com/search.aspx";
+let hp = {};
+hp.key = params.keyWord;
+hp.page = "Page";
+hp.siteid = "app2";
+return {url: url, httpParams: hp, POST: false};
+
+格式: json
+
+js手动解析:
+function functionName(config, params, result) {
+    let list = [];
+    let data = result.data;
+    if (data && data.length > 0) {
+        data.forEach((item, index, array) => {
+            let bookInfo = {};
+            bookInfo.bookName = item.Name;
+            bookInfo.author = item.Author;
+            bookInfo.cover = item.Img;
+            bookInfo.desc = item.Desc;
+            bookInfo.cat = item.CName;
+            bookInfo.status = item.BookStatus;
+            bookInfo.lastChapterTitle = item.LastChapter;
+            bookInfo.detailUrl = "/book/" + item.Id + "/";
+            list.push(bookInfo);
+        })
+    }
+
+    return {list: list, more: false};
+}
+
+
+章节列表:
+
+json js手动解析:
+function functionName(config, params, result) {
+    let detailUrl = params.queryInfo.detailUrl;
+    let list = [];
+    let data = result.data;
+    if (data && data.list && data.list.length > 0) {
+        let chapters = data.list;
+        chapters.forEach((item, index, array) => {
+            let chapterInfo = {};
+            chapterInfo.title = item.name;
+            list.push(chapterInfo);
+
+            item.list.forEach((item2, index2, array2) => {
+                chapterInfo = {};
+                chapterInfo.title = item2.name;
+                chapterInfo.url = detailUrl + item2.id + ".html";
+                list.push(chapterInfo);
+            })
+        })
+    }
+
+    return {list: list};
+}
+
+
+内容:
+json js手动解析:
+function functionName(config, params, result) {
+    let data = result.data;
+    if (data) {
+        return {response: data.content};
+    }
+
+    return undefined;
+}
