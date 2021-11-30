@@ -8,6 +8,14 @@ https://m.ailawen.com
 搜索:
 请求: /modules/article/waps.php
 
+%@js
+let url = "/modules/article/waps.php";
+let hp = {};
+hp.searchtype = "articlename";
+hp.submit = "";
+hp.searchkey = params.keyWord;
+return {url: url, httpParams: hp, POST: true};
+
 列表: //div[@class="cover"]/p
 书名: //a[2]/text()
 作者: //a[3]/text()
