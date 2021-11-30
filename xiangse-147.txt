@@ -3,6 +3,18 @@
 147
 https://m.147xs.org/
 
+搜索:
+
+请求:
+# 使用js代码代替moreKeys中的httpParams和POST
+
+%@js
+let url = "/search.php";
+let hp = {};
+hp.keyword = params.keyWord;
+return {url: url, httpParams: hp, POST: true};
+
+
 书籍详情:
 书名: //div[@class="book_info"]//dl/dt/text()
 作者: //div[@class="book_info"]//dl/dd[1]/span/text()
