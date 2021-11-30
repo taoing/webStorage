@@ -8,6 +8,13 @@ http://www.120xsw.com
 搜索:
 
 请求: /modules/article/search.php
+
+%@js
+let url = "/modules/article/search.php";
+let hp = {};
+hp.searchkey = params.keyWord;
+return {url: url, httpParams: hp, POST: false};
+
 列表: //div[@id="content"]/div[@class="inner"]/div[@class="details"]/div[@class="item-pic"]
 书名: //h3/a/text()
 作者: //p[1]/i[1]/text()
