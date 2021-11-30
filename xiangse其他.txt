@@ -1,0 +1,9 @@
+# xiangse 搜索
+
+1. 九桃小说
+
+%@js
+let url = "https://so.9txs.org/www/";
+let hp = {};
+hp.searchKey = params.keyWord;
+return {url: url, httpParams: hp, POST: true};
