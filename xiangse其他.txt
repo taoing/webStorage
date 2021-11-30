@@ -5,5 +5,5 @@
 %@js
 let url = "https://so.9txs.org/www/";
 let hp = {};
-hp.searchKey = params.keyWord;
+hp.searchkey = params.keyWord;
 return {url: url, httpParams: hp, POST: true};
