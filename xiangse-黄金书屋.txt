@@ -8,6 +8,15 @@ https://www.dduxs.com
 搜索:
 
 请求: /search.php
+
+%@js
+let url = "/search.php";
+let hp = {};
+hp.q = params.keyWord;
+hp.offset = params.offset;
+hp.length = 30;
+return {url: url, httpParams: hp, POST: true};
+
 格式: json
 
 js手动解析:
