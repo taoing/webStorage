@@ -9,6 +9,14 @@ https://m.po18s.com
 搜索:
 
 请求: /s.php
+
+%@js
+let url = "/s.php";
+let hp = {};
+hp.type = "articlename";
+hp.s = params.keyWord;
+return {url: url, httpParams: hp, POST: true};
+
 列表: //div[@class="searchresult"]/p
 书名: //a[1]/text()|%@js
 if (result.indexOf("\n") > -1) {
