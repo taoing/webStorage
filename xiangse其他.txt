@@ -2,7 +2,7 @@
 
 1. 九桃小说
 
-%@js
+@js:
 let url = "https://so.9txs.org/www/";
 let hp = {};
 hp.searchkey = params.keyWord;
