@@ -18,8 +18,43 @@ https://weilaiba.coding.net/p/s/d/s/git/raw/master/sourceModelList.xbs
 听书源(20+)
 https://aliyabates.coding.net/p/xs/d/xs/git/raw/master/sourceModelList.xbs
 
-BigFanTu
-https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/README.md
+
+BigFanTu仓库-自制与修改源
+
+小说
+棉花糖小说： https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/mht.xbs
+九桃小说: https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/jtxs.xbs
+书趣阁: https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/sqg.xbs
+八戒中文网：https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/bjzww.xbs
+推书君: https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/tsj.xbs
+笔趣阁api: https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/bqgapi.xbs
+笔趣阁api2:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/bqgapi2.xbs
+爪机书屋:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/zjsw.xbs
+轻之文库:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/qzwk.xbs
+
+漫画
+久久漫画:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/99mh.xbs
+搜动漫: https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/sdm.xbs
+知*客: https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/zymk.xbs
+冰氪:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/icekr.xbs
+野蛮漫画:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/ymmh.xbs
+蒂亚漫画:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/diyamh.xbs
+扑飞漫画:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/pfmh.xbs
+包子漫画:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/bzmh.xbs
+漫百分:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/mbf.xbs
+mangabz漫画:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/mangabz.xbs
+x漫画:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/xmh.xbs
+亿漫:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/ymmh.xbs
+漫画1234:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/mh1234.xbs
+
+视频
+855影视:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/855.xbs
+批哩批哩:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/pilipili.xbs
+美日韩剧大全:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/hanjuapi.xbs
+4k视频:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/4k.xbs
+CHOH视频:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/CHOK.xbs
+看番:https://gitee.com/BigFanTu/XsRead-source/blob/master/NovelSource/mvkf.xbs
+
 
 haitang-blossoms花开大佬混合源(20+)
 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/%E4%B8%AD%E6%96%87%E6%BA%90.md
