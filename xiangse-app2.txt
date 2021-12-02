@@ -72,7 +72,7 @@ json js手动解析:
 function functionName(config, params, result) {
     let data = result.data;
     if (data) {
-        return {response: data.content};
+        return {content: data.content};
     }
 
     return undefined;
