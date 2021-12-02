@@ -49,6 +49,9 @@ function functionName(config, params, result) {
     let data = result.data;
     if (data && data.list && data.list.length > 0) {
         let chapters = data.list;
+        chapters.sort((a, b) => {
+            return a.list[0].id - b.list[0].id;
+        });
         chapters.forEach((item, index, array) => {
             let chapterInfo = {};
             chapterInfo.title = item.name;
