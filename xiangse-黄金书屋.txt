@@ -68,7 +68,7 @@ url: //a/@href
 
 
 内容:
-正文: //div[@id="nr1"]
+正文: //div[@id="nr1"]/p/text()
 
 
 分类:
