@@ -89,7 +89,7 @@ moreKeys: {"maxPage":300}
 
 
 内容:
-正文: //div[@id="novelcontent"]/p
+正文: //div[@id="novelcontent"]/p/text()
 下一页: 
 
 moreKeys:
