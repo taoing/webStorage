@@ -12,11 +12,25 @@ httpHeaders:
 请求: /search.html
 
 @js:
-let url = "/search.html";
+let url = "/search.php";
+let timestamp = new Date().getTime() - Math.floor(2 + Math.random() * 8) * 60 * 1000;
+let curTime = Math.round(timestamp / 1000);
+let expireTime = Math.round((timestamp + 49.4 * 3600 * 1000) / 1000);
 let hp = {};
-hp.s = params.keyWord;
-let hh = {'Referer': 'https://www.dduxs.com/'};
-return {url: url, httpParams: hp, httpHeaders: hh, POST: false};
+hp.q = params.keyWord;
+hp.offset = params.offset;
+hp.length = 30;
+let hh = {
+    'Accept': 'application/json, text/javascript, */*; q=0.01',
+    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+    'Host': 'www.dduxs.com',
+    'Origin': 'https://www.dduxs.com',
+    'Referer': 'https://www.dduxs.com/search.html?s=' + encodeURIComponent(hp.q),
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36',
+    'Cookie': 'Hm_lvt_25d1bfa082fcab30debd9ada31a870d3=' + curTime + ',' + expireTime + '; Hm_lpvt_25d1bfa082fcab30debd9ada31a870d3=' + Math.round(new Date().getTime() / 1000)
+}
+return {url: url, httpParams: hp, httpHeaders: hh, POST: true};
+
 
 格式: json
 
@@ -28,11 +42,7 @@ function functionName(config, params, result) {
         search.forEach((item, index, array) => {
             let bookInfo = {};
             let id = item.site_book_id;
-            if (index === 0 && item.title.indexOf("<b style=") > -1) {
-                bookInfo.bookName = item.title.replace("<b style=\"color:red\">", "").replace("</b>", "");
-            } else {
-                bookInfo.bookName = item.title;
-            }
+            bookInfo.bookName = item.book_name;
             bookInfo.author = item.author;
             bookInfo.cover = "/img/" + Math.floor(id / 1000) + "/" + id + ".jpg";
             bookInfo.desc = "";
@@ -44,10 +54,9 @@ function functionName(config, params, result) {
             list.push(bookInfo);
         })
     }
-    
+
     return {"list": list, "more": false};
 }
-
 
 书籍详情:
 书名: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-describe"]/h1[1]/text()
