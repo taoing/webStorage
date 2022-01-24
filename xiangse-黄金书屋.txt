@@ -43,7 +43,11 @@ function functionName(config, params, result) {
             let bookInfo = {};
             let id = item.site_book_id;
             bookInfo.bookName = item.book_name;
-            bookInfo.author = item.author;
+            if (item.author.indexOf("<b style=\"color:red\">") > -1) {
+                bookInfo.author = item.author.replace("<b style=\"color:red\">", "").replace("</b>", "");
+            } else {
+                bookInfo.author = item.author;
+            }
             bookInfo.cover = "/img/" + Math.floor(id / 1000) + "/" + id + ".jpg";
             bookInfo.desc = "";
             bookInfo.cat = "";
@@ -59,75 +63,173 @@ function functionName(config, params, result) {
 }
 
 书籍详情:
-书名: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-describe"]/h1[1]/text()
-作者: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-describe"]/p[1]/a/text()
-图标: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-img"]/img/@data-original
-简介: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-describe"]/p[last()]/text()
-类别: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-describe"]/p[2]/text()
-状态: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-describe"]/p[3]/font/text()
-字数: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-describe"]/p[4]/text()|%@js return parseFloat(result.replace("万字", "")) * 10000
-最后一章: /html/body/div[@id="content-list"]/div[@class="book-intro clearfix"]/div[@class="book-describe"]/p[6]/a/text()
-
-
-章节列表:
-列表: /html/body/div[@id="content-list"]/div[@class="book-list clearfix"]/ul/li
-标题: //a/text()
-url: //a/@href
-
-
-内容:
-正文: //div[@id="nr1"]/p/text()
-
-
-分类:
-全部
-
-请求信息: /category/%@filter/
-
-列表: /html/body/div[@id="content-list"]/div[@class="pop-books2 clearfix"]/ol/li
-书名: //a[2]/h2/text()
-作者: 
-图标: //a[1]/img/@data-original
-简介:
-类别: 
-状态: 
-字数: 
-最后一章: 
-详情页地址: //a[2]/@href
-
-moreKeys:
-{
-  "requestFilters": {
-    "起点热度书": "1",
-    "纵横热度书": "2",
-    "影视剧小说": "3",
-    "中文经典": "4",
-    "金庸作品集": "5"
-  }
-}
-
-
-
-20211028:
-
-书籍详情2:
 书名: //div[@class="book-describe"]/h1[1]/text()
 作者: //div[@class="book-describe"]/p[1]/a/text()
 图标: //div[@class="book-img"]/img/@data-original
 简介: //div[@class="book-describe"]/p[last()]/text()
 类别: //div[@class="book-describe"]/p[2]/text()
 状态: //div[@class="book-describe"]/p[3]/font/text()
-字数: //div[@class="book-describe"]/p[4]/text()|%@js return parseFloat(result.replace("万字", "")) * 10000
+字数: //div[@class="book-describe"]/p[4]/text()|@js: return parseFloat(result.replace("万字", "")) * 10000
 最后一章: //div[@class="book-describe"]/p[6]/a/text()
 
 
-章节列表2:
-列表: //div[@class="book-list clearfix"]/ul/li
-标题: //a/text()
-url: //a/@href
+章节列表:
+// 字符串 js手动解析:
+
+function functionName(config, params, result) {
+    function Base64Decode() {
+        let _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+        this.decode = function (input) {
+            let output = "";
+            let chr1, chr2, chr3;
+            let enc1, enc2, enc3, enc4;
+            let i = 0;
+            input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+            while (i < input.length) {
+                enc1 = _keyStr.indexOf(input.charAt(i++));
+                enc2 = _keyStr.indexOf(input.charAt(i++));
+                enc3 = _keyStr.indexOf(input.charAt(i++));
+                enc4 = _keyStr.indexOf(input.charAt(i++));
+                chr1 = (enc1 << 2) | (enc2 >> 4);
+                chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+                chr3 = ((enc3 & 3) << 6) | enc4;
+                output = output + String.fromCharCode(chr1);
+                if (enc3 != 64) {
+                    output = output + String.fromCharCode(chr2)
+                }
+                if (enc4 != 64) {
+                    output = output + String.fromCharCode(chr3)
+                }
+            }
+            output = _utf8_decode(output);
+            return output
+        };
+
+        let _utf8_decode = function (utftext) {
+            let string = "";
+            let i = 0;
+            let c, c2, c3;
+            c = 0;
+            while (i < utftext.length) {
+                c = utftext.charCodeAt(i);
+                if (c < 128) {
+                    string += String.fromCharCode(c);
+                    i++
+                } else {
+                    if ((c > 191) && (c < 224)) {
+                        c2 = utftext.charCodeAt(i + 1);
+                        string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
+                        i += 2
+                    } else {
+                        c2 = utftext.charCodeAt(i + 1);
+                        c3 = utftext.charCodeAt(i + 2);
+                        string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+                        i += 3
+                    }
+                }
+            }
+            return string
+        }
+    }
+
+    let detailUrl = params.queryInfo.detailUrl;
+    let list = [];
+    let startTag = "var chapters = JSON.parse(base.decode('";
+    let endTag = "'));\n";
+    let index1 = result.indexOf(startTag);
+    let index2 = result.lastIndexOf(endTag);
+    if (index1 === -1 || index2 === -1) {
+        return {list: list};
+    }
+    let targetStr = result.substring(index1 + startTag.length, index2);
+    let base = new Base64Decode();
+    let chapters = JSON.parse(base.decode(targetStr));
+    for (let key in chapters) {
+        let chapterInfo = {};
+        chapterInfo.title = chapters[key].name;
+        chapterInfo.url = detailUrl + chapters[key].index + ".html";
+        list.push(chapterInfo);
+    }
+    return {list: list};
+}
 
 
-分类2:
+内容:
+// 字符串 js手动解析:
+
+function functionName(config, params, result) {
+    function Base64Decode() {
+        let _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+        this.decode = function (input) {
+            let output = "";
+            let chr1, chr2, chr3;
+            let enc1, enc2, enc3, enc4;
+            let i = 0;
+            input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+            while (i < input.length) {
+                enc1 = _keyStr.indexOf(input.charAt(i++));
+                enc2 = _keyStr.indexOf(input.charAt(i++));
+                enc3 = _keyStr.indexOf(input.charAt(i++));
+                enc4 = _keyStr.indexOf(input.charAt(i++));
+                chr1 = (enc1 << 2) | (enc2 >> 4);
+                chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+                chr3 = ((enc3 & 3) << 6) | enc4;
+                output = output + String.fromCharCode(chr1);
+                if (enc3 != 64) {
+                    output = output + String.fromCharCode(chr2)
+                }
+                if (enc4 != 64) {
+                    output = output + String.fromCharCode(chr3)
+                }
+            }
+            output = _utf8_decode(output);
+            return output
+        };
+
+        let _utf8_decode = function (utftext) {
+            let string = "";
+            let i = 0;
+            let c, c2, c3;
+            c = 0;
+            while (i < utftext.length) {
+                c = utftext.charCodeAt(i);
+                if (c < 128) {
+                    string += String.fromCharCode(c);
+                    i++
+                } else {
+                    if ((c > 191) && (c < 224)) {
+                        c2 = utftext.charCodeAt(i + 1);
+                        string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
+                        i += 2
+                    } else {
+                        c2 = utftext.charCodeAt(i + 1);
+                        c3 = utftext.charCodeAt(i + 2);
+                        string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+                        i += 3
+                    }
+                }
+            }
+            return string
+        }
+    }
+
+    let startTag = "var content = base.decode('";
+    let endTag = "');\n";
+    let index1 = result.indexOf(startTag);
+    let index2 = result.lastIndexOf(endTag);
+    if (index1 === -1 || index2 === -1) {
+        return undefined;
+    }
+    let targetStr = result.substring(index1 + startTag.length, index2);
+    let base = new Base64Decode();
+    let content = base.decode(targetStr);
+    content = content.replace("<p>", "").replace("</p>", "\n");
+
+    return {content: content};
+}
+
+
+分类:
 
 1. 分类
 
