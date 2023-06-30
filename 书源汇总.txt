@@ -2,110 +2,12 @@
 
 (
 主要来自汇总:
-https://gitee.com/giovannyramsey/xs
-https://gitee.com/zqzess/my-book-web-storage
+https://github.com/zqzess/MyWebStorage
 )
 
-AlphonsoEstrada优质书源(30+，强推，格式好，速度快，包括绝大多数流行网络小说)
-https://alphonsoestrada.coding.net/p/test/d/xiangse/git/raw/master/sourceModelList.xbs
 
-海棠源(10+，懂的都懂^_^)
+海棠源(18+，懂的都懂^_^)
 https://cdn.jsdelivr.net/gh/dejiayuan/xiangse/sourceModelList.xbs
 
-漫画源(30+)
-https://weilaiba.coding.net/p/s/d/s/git/raw/master/sourceModelList.xbs
-
-听书源(20+)
-https://aliyabates.coding.net/p/xs/d/xs/git/raw/master/sourceModelList.xbs
-
-
-BigFanTu仓库-自制与修改源
-
-小说
-棉花糖小说： https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/mht.xbs
-九桃小说: https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/jtxs.xbs
-书趣阁: https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/sqg.xbs
-八戒中文网：https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/bjzww.xbs
-推书君: https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/tsj.xbs
-笔趣阁api: https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/bqgapi.xbs
-笔趣阁api2:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/bqgapi2.xbs
-爪机书屋:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/zjsw.xbs
-轻之文库:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/qzwk.xbs
-
-漫画
-久久漫画:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/99mh.xbs
-搜动漫: https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/sdm.xbs
-知*客: https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/zymk.xbs
-冰氪:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/icekr.xbs
-野蛮漫画:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/ymmh.xbs
-蒂亚漫画:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/diyamh.xbs
-扑飞漫画:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/pfmh.xbs
-包子漫画:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/bzmh.xbs
-漫百分:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/mbf.xbs
-mangabz漫画:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/mangabz.xbs
-x漫画:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/xmh.xbs
-亿漫:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/ymmh.xbs
-漫画1234:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/mh1234.xbs
-韩漫:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/hanman.xbs
-漫画柜:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/MHg.xbs
-彩墨阁:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/彩墨阁.xbs
-
-视频
-855影视:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/855.xbs
-批哩批哩:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/pilipili.xbs
-美日韩剧大全:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/hanjuapi.xbs
-4k视频:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/4k.xbs
-CHOH视频:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/CHOK.xbs
-看番:https://gitee.com/BigFanTu/XsRead-source/raw/master/NovelSource/mvkf.xbs
-
-
-haitang-blossoms花开大佬混合源(20+)
-
-小说
-晋江文学城 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/jjwxc.xbs
-笔下文学 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/bxwxorg.xbs
-豆腐小说 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/doufu.xbs
-青果阅读 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/qingoo.xbs
-书耽 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/shubl.xbs
-https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/gongzicp.xbs
-鲲弩小说 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/kunnu.xbs
-书宝网 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/shubaow.xbs
-镇魂小说 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/zhenhunxiaoshuo.xbs
-笔趣阁 xswang https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/biqugexswang.xbs
-mmKuu https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/mmKuu.xbs
-101 小說典藏網 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/novel101.xbs
-358小说 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/35851.xbs
-
-漫画
-bilibilicomics https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/bilibilicomics.xbs
-哔哩哔哩漫画 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/bilibilimanga.xbs
-快看漫画（api） https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/kuaikan.xbs
-腾讯动漫 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/macqq.xbs
-腐漫漫画 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/fumanmi.xbs
-香香腐宅 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/boylove.xbs
-漫蛙 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/manwa.xbs
-亲亲漫画 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/acgqd.xbs
-包子漫画 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/baozimh.xbs
-
-听书
-猫耳FM https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/missevan.xbs
-ishuyin https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/ishuyin.xbs
-喜马拉雅FM https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/ximalaya.xbs
-Mixes.Cloud https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/Mixes.Cloud.xbs
-New Temp Drama House https://github.com/haitang-blossoms/xiangsesource/blob/main/xiangsesource-master/xiangsesource/New%20Temp%20Drama%20House.xbs
-水哥故事会 https://github.com/haitang-blossoms/xiangsesource/blob/main/xiangsesource-master/xiangsesource/shuige.xbs
-哔哩哔哩 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/bilibiliaudio.xbs
-
-视频
-快看漫剧 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/kkcomicdrama.xbs
-快看社区视频 https://raw.githubusercontent.com/haitang-blossoms/xiangsesource/main/xiangsesource-master/xiangsesource/socialkuaikan.xbs
-
-
-ksnohome
-https://gitee.com/ksnohome/onerice/raw/master/README.md
-
-not-happy-seat
-https://gitee.com/not-happy-seat/fragrant-boudoir/raw/master/README.md
-
-xcode
-https://gitee.com/xdeep/booksoursce/raw/master/README.md
+整合源
+https://raw.githubusercontent.com/zqzess/MyWebStorage/main/xsreader/new/resources.txt
